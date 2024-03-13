@@ -33,6 +33,10 @@ createApp({
     addTask(){
       this.todoList.unshift(this.newTask)
     },
+
+    removeTodo(indice){
+      this.todoList.splice(indice, 1);
+    }
   },
 
   mounted(){
