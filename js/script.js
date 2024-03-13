@@ -46,8 +46,13 @@ createApp({
     },
 
     removeTodo(indice){
-      this.todoList.splice(indice, 1);
-      
+      if (this.todoList[indice].done === true) {
+        this.todoList.splice(indice, 1);
+        this.errorMsg = '';
+      }else{
+        this.errorMsg = 'Errore!!! Puoi eliminare solo i task completati';
+        this.isError = true;
+      }
     }
   },
 
