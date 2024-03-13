@@ -8,22 +8,36 @@ createApp({
 
     return {
       todoList: [
-        'Fare la spesa',
-        'Studiare JS',
-        'Allenarsi a basket'
+        {
+          toDo:'Fare la spesa',
+          done: false,
+        },
+
+        {
+          toDo:'Allenarmi a basket',
+          done: true,
+        },
+
+        {
+          toDo:'Mangiare a cena fuori',
+          done: false,
+        },
       ],
 
       newTask: '',
+      isdone: false,
     }
 
   },
 
   methods: {
-
+    addTask(){
+      this.todoList.unshift(this.newTask)
+    },
   },
 
   mounted(){
-
+  
   },
 
 }).mount('#app');
