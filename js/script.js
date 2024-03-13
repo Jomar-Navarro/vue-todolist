@@ -25,17 +25,21 @@ createApp({
       ],
 
       newTask: '',
+      errorMsg:'',
     }
 
   },
 
   methods: {
     addTask(){
-      this.todoList.unshift(this.newTask)
+      const newObj = {toDo: this.newTask, done: false};
+      this.todoList.unshift(newObj)
+      
     },
 
     removeTodo(indice){
       this.todoList.splice(indice, 1);
+      
     }
   },
 
