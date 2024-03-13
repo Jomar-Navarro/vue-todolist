@@ -20,12 +20,11 @@ createApp({
 
         {
           toDo:'Mangiare a cena fuori',
-          done: false,
+          done: true,
         },
       ],
 
       newTask: '',
-      isdone: false,
     }
 
   },
