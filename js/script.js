@@ -53,6 +53,10 @@ createApp({
         this.errorMsg = 'Errore!!! Puoi eliminare solo i task completati';
         this.isError = true;
       }
+    },
+
+    toggleDone(task){
+      task.done = !task.done;
     }
   },
 
