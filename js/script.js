@@ -7,7 +7,13 @@ createApp({
   data(){
 
     return {
+      todoList: [
+        'Fare la spesa',
+        'Studiare JS',
+        'Allenarsi a basket'
+      ],
 
+      newTask: '',
     }
 
   },
