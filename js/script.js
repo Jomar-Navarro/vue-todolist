@@ -25,16 +25,24 @@ createApp({
       ],
 
       newTask: '',
-      errorMsg:'',
+      errorMsg: '',
+      isError: false,
     }
 
   },
 
   methods: {
     addTask(){
-      const newObj = {toDo: this.newTask, done: false};
-      this.todoList.unshift(newObj)
       
+      if (this.newTask.length >= 4) {
+        const newObj = {toDo: this.newTask, done: false};
+        this.todoList.unshift(newObj);
+        this.newTask = '';
+        this.errorMsg = '';
+      }else{
+        this.errorMsg = 'Warning! Error404'
+        this.isError = true
+      }
     },
 
     removeTodo(indice){
