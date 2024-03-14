@@ -26,7 +26,6 @@ createApp({
 
       newTask: '',
       errorMsg: '',
-      isError: false,
     }
 
   },
@@ -41,7 +40,6 @@ createApp({
         this.errorMsg = '';
       }else{
         this.errorMsg = 'Warning! Error404'
-        this.isError = true
       }
     },
 
@@ -51,7 +49,6 @@ createApp({
         this.errorMsg = '';
       }else{
         this.errorMsg = 'Errore!!! Puoi eliminare solo i task completati';
-        this.isError = true;
       }
     },
 
